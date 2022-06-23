@@ -99,6 +99,7 @@ body {
     background-color: var(--welcome-section-bkg);
     margin-top: 70px;
     width: 100%;
+    min-width: fit-content;
 }
 
 .welcome-section .content {
@@ -202,6 +203,7 @@ h1 {
 .services-section {
     background-color: var(--services-section-bkg);
     text-align: center;
+    min-width: fit-content;
 }
 
 .services-section .content {
@@ -251,6 +253,7 @@ h1 {
 
 .about-us-section {
     background-color: var(--about-us-section-bkg);
+    min-width: fit-content;
     
 }
 .about-us-section .content {
@@ -262,6 +265,7 @@ h1 {
 
 .contact-us-section {
     background-color: var(--footer-button-font-color);
+    min-width: fit-content;
 }
 
 .contact-us-section .content {
@@ -286,7 +290,7 @@ h1 {
 
 footer {
     background-color: var(--header-footer-bkg);
-    width: 100%;
+    min-width: fit-content;
 }
 
 .footer-content {
