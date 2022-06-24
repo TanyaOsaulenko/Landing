@@ -19,7 +19,6 @@ body {
     padding: 0;
 }
 
-
 .header-content, .content, .footer-content {
     width: var(--content-width);
     margin: 0 auto;
@@ -27,7 +26,7 @@ body {
 }
 
 .section-title {
-    width: 500px;
+    width: 450px;
     font-weight: 700;
     font-size: 40px;
     line-height: 52px;
@@ -36,7 +35,7 @@ body {
 
 .description {
     font-size: 16px;
-    line-height: 150%;
+    line-height: 24px;
     color: var(--paragraph-font-color);
 }
 
@@ -47,10 +46,10 @@ body {
     top: 0;
     left: 0;
     background-color: var(--welcome-section-bkg);
-    z-index: 2;   
+    z-index: 1;   
 }
 
-.header-content {
+.header-content { 
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -60,15 +59,16 @@ body {
     color: var(--header-footer-bkg);
 }
 
-.menu> nav a {
+.menu a {
     padding: 0 32px 22px;
     color: var(--header-footer-bkg);
     text-decoration: none;
+    transition: text-shadow 0.3s;        
 }
 
-.menu> nav a:hover {
+.menu a:hover {
     border-bottom: 3px solid var(--header-footer-bkg);
-    font-weight: bold;
+    text-shadow: 0.5px 0 var(--header-footer-bkg);    
 }
 
 .schedule-appointment-button {
@@ -76,7 +76,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     font-size: 14px;
-    line-height: 18px; 
+    line-height: 5px; 
     border-radius: 40px;
     cursor: pointer; 
     background-color: var(--welcome-section-bkg);
@@ -98,15 +98,18 @@ body {
 .welcome-section {
     background-color: var(--welcome-section-bkg);
     margin-top: 70px;
-    width: 100%;
     min-width: fit-content;
 }
 
 .welcome-section .content {
-    padding: 6px 0 60px;
+    padding: 5px 0 60px;
     display: flex;
-    justify-content: space-between;
     position: relative;
+    align-items: center;
+}
+
+.welcome-section .content>img {
+    height: 100%;
 }
 
 .text-content {
@@ -124,13 +127,13 @@ body {
 h1 {
     font-weight: 700;
     font-size: 52px;
-    line-height: 130%;
+    line-height: 62px;
     color: var(--main-font-color);
 }
 
 .section-subtitle {
     font-size: 18px;
-    line-height: 150%;
+    line-height: 24px;
     color: var(--paragraph-font-color);
 }
 
@@ -165,7 +168,7 @@ h1 {
 .numbers-indexes {
     background-color: var(--about-us-section-bkg);
     position: absolute;
-    width: var(--content-width);
+    width: 100%;
     height: 210px;
     bottom: -105px;
     border: 1px solid var(--welcome-section-bkg);
@@ -174,15 +177,14 @@ h1 {
     display: flex;
     align-items: center; 
     text-align: center;   
-    z-index: 1;
 }
 
-.numbers-indexes>div:nth-child(2) {
+.numbers-indexes div:nth-child(2) {
     border-right: 1px solid var(--header-footer-bkg);
     border-left: 1px solid var(--header-footer-bkg);
 }
 
-.numbers-indexes>div {
+.numbers-indexes div {
     flex: 1;   
 }
 
@@ -217,7 +219,7 @@ h1 {
 .card-wrapper {
     padding-top: 65px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
 }
@@ -259,7 +261,6 @@ h1 {
 .about-us-section .content {
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
     gap: 40px;
 }
 
@@ -272,6 +273,11 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-us-section .content .section-title {
+    width: 350px;
 }
 
 .contact-data {
@@ -298,6 +304,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
 .logo-white {
@@ -310,7 +317,13 @@ footer {
     line-height: 32px;
 }
 
-.social-networks>img:not(:last-child) {
+.social-networks {
+    width: 300px;
+    align-self: center;
+    text-align: right;
+}
+
+.social-networks a:not(:last-child) {
     margin-right: 40px;
 } 
 
@@ -341,16 +354,19 @@ footer {
 }
 
 .about-us-section .content, .contact-us-section .content {
-   align-items: flex-start;
-   padding: 100px 24px;
+    padding: 100px 24px;
 }
 
-.menu> nav a, .schedule-appointment-button {
+.menu a, .schedule-appointment-button {
     display: none;
 }
 
 .menu-icon {
     display: block;
+}
+
+.section-title, .contact-us-section .content .section-title {
+    width: auto;
 }
 
 .numbers-indexes {
@@ -361,19 +377,19 @@ footer {
     width: auto;
 }
    
-.numbers-indexes>div {
+.numbers-indexes div {
     padding: 35px 0;
 }
 
-.numbers-indexes>div:nth-child(2) {
+.numbers-indexes div:nth-child(2) {
     border: none;    
 }
 
-.card-wrapper {
-    justify-content: center;
+.about-us-section .content {
+    flex-direction: column-reverse;
 }
 
-.section-title, .doctor, .calling-man {
+.doctor, .calling-man, .card, .social-networks{
     width: 100%;
 }
 
@@ -382,8 +398,10 @@ footer {
     padding: 60px 24px;
     box-sizing: border-box;
 } 
+
 .social-networks {
     padding-top: 25px;
+    text-align: left;
 }
 }
 
