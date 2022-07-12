@@ -117,8 +117,8 @@ header.scrolled .logo-white {
     /* display: none; */
 }
 
-.close-icon.active {
-    display: block;
+.contact-form.active {
+    display: none;
 }
 
 .close-icon {

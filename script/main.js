@@ -7,10 +7,11 @@ const contactForm = document.getElementById("contact-form");
 function showHide() {
     hamburgerMenu.classList.toggle("active");
     mobileMenu.classList.toggle("active");
-    closeIcon.classList.toggle("active");
+    contactForm.classList.toggle("active");
 }
     
 hamburgerMenu.addEventListener("click", showHide);
+closeIcon.addEventListener("click", showHide);
 
 // this is a working solution, but better to use classes to keep all styles in css
 // function changeHeaderColor() {
