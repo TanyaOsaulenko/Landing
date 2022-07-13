@@ -1,17 +1,23 @@
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const mobileMenu = document.getElementById("mobile-menu");
 const header = document.getElementById("header");
-const closeIcon = document.getElementById("close-icon")
+const contactFormCloseBtn = document.getElementById("close-icon")
 const contactForm = document.getElementById("contact-form");
+const contactFormButtons = document.getElementsByClassName("contact-form-button")
 
-function showHide() {
+
+function showHideMenu() {
     hamburgerMenu.classList.toggle("active");
     mobileMenu.classList.toggle("active");
-    contactForm.classList.toggle("active");
 }
     
-hamburgerMenu.addEventListener("click", showHide);
-closeIcon.addEventListener("click", showHide);
+hamburgerMenu.addEventListener("click", showHideMenu);
+
+
+function closeContactForm() {
+    contactForm.classList.remove("active");
+}
+contactFormCloseBtn.addEventListener("click", closeContactForm);
 
 // this is a working solution, but better to use classes to keep all styles in css
 // function changeHeaderColor() {
@@ -34,4 +40,10 @@ function changeHeaderColor() {
 
 window.addEventListener("scroll", changeHeaderColor);
 
+function showContuctForm() {
+    contactForm.classList.add("active");
+}
 
+for (let i=0; i < contactFormButtons.length; i++) {
+    contactFormButtons[i].addEventListener("click", showContuctForm);   
+}

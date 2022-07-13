@@ -109,16 +109,22 @@ header.scrolled .logo-white {
 
 .contact-form {
     background-color: var(--header-footer-bkg);
+    border: 2px dashed var(--paragraph-font-color);
     border-radius: 12px;
     margin-bottom: 100px;
     margin: auto;
     padding: 20px;
     width: 400px;
-    /* display: none; */
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 50%;
+    margin-left: -222px;
+    margin-bottom: 171px;
 }
 
 .contact-form.active {
-    display: none;
+    display: block;
 }
 
 .close-icon {
@@ -523,8 +529,8 @@ footer .logo-white {
     margin: 20px;
 }
 
-.contact-form {
-    width: 250px;
+.contact-form, .contact-form input {
+    width: auto;
 }
 
 .text-content {
