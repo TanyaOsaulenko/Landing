@@ -10,7 +10,7 @@
   </head>
   <body>
     <header id="header">
-      <div class="header-content ">
+      <div class="header-content">
         <a href="#">
           <img class="logo" src="images/logo.svg" alt="logo">
           <img class="logo-white" src="images/logo-white.svg" alt="white logo">
@@ -47,16 +47,7 @@
           <p class="section-subtitle">Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura a longo prazo.</p>
           <button type="button" class="schedule-your-appointment-button contact-form-button"><span class="vertical-aling-for-button"><img class="call-icon" src="images/call.png" alt="handset">Agende sua consulta</span></button>
         </div>
-        <div id="contact-form" class="contact-form">
-          <div><img id="close-icon" class="close-icon" src="images/menu-close.svg" alt="close icon"></div>
-          <p class="contact-form-name">Give us your contact data</p>
-          <label for="contact-name">Enter your contact name:</label> 
-          <input type="text" id="contact-name" name="contact-name">
-          <label for="phone">Enter your contact phone number:</label>
-          <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
-          <input type="submit" value="SUBMIT">
-        </div>
-          <img src="images/woman.png" alt="woman">
+        <img src="images/woman.png" alt="woman">
         <div class="numbers-indexes">
           <div>
             <span class="number">+3.500</span>
@@ -126,6 +117,16 @@
         <img class="calling-man" src="images/man.png" alt="calling man">
       </div>
     </section>
+    <div id="contact-form" class="contact-form">
+      <div><img id="close-icon" class="close-icon" src="images/menu-close.svg" alt="close icon"></div>
+      <p class="contact-form-name">Give us your contact data</p>
+      <label for="contact-name">Enter your contact name:</label> 
+      <input type="text" id="contact-name" name="contact-name">
+      <label for="phone">Enter your contact phone number:</label>
+      <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+      <!-- Alternative way to add onclick event to element -->
+      <input type="submit" value="SUBMIT" onclick="hideContactForm()">
+    </div>
     <footer>
       <div class="footer-content">
         <div>
